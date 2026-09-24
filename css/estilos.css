@@ -11,7 +11,27 @@ h1, h2, h3 {
   font-family: "Bebas Neue", sans-serif;
 }
 
-/* Font para el texto principal */
+/* Font para el texto principal, tamaño base y line-height */
 body {
-  font-family: "Roboto Mono", monospace;
+    font-size: 1rem; /* Equivalente a 16px */
+    line-height: 1.6; /* Mejora la legibilidad (entre 1.5 y 1.8) */
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: "Roboto Mono", monospace;
+}
+
+/* Estilos diferenciados para los headings (tamaño y color) */
+h1 {
+  font-size: 2.5rem;
+  color: #1C2B3E; /* Color de texto */
+}
+
+h2 {
+  font-size: 2rem;
+  color: #2181BD; /* Color primario */
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #3C678E; /* Color secundario */
 }
