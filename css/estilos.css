@@ -1,0 +1,17 @@
+:root {
+    --color-primario: #2181BD; /*Para encabezados principales (Nav, header o h1 y h2) */
+    --color-secundario: #6DADD8; /* Para cosas secundarias (aside, footer) */
+    --color-acento: #80CBF3; /* Para botones que hagan algo, iconos si hay o cosas que necesiten llamar la atencion */
+    --color-fondo: #F4F7F9; /* Para el cuerpo principal (Body, main) */
+    --color-texto: #1C2B3E; /* Texto principal (P) */
+}
+
+/* Font para títulos */
+h1, h2, h3 {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/* Font para el texto principal */
+body {
+  font-family: "Roboto Mono", monospace;
+}
