@@ -82,6 +82,7 @@ nav {
 }
 
 nav a {
+    font-family: "Roboto Mono", monospace;
     color: white;
     text-decoration: none;
     padding: 0.8rem 1.2rem;
