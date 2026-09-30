@@ -1,37 +1,129 @@
 :root {
-    --color-primario: #2181BD; /*Para encabezados principales (Nav, header o h1 y h2) */
-    --color-secundario: #6DADD8; /* Para cosas secundarias (aside, footer) */
-    --color-acento: #80CBF3; /* Para botones que hagan algo, iconos si hay o cosas que necesiten llamar la atencion */
-    --color-fondo: #F4F7F9; /* Para el cuerpo principal (Body, main) */
-    --color-texto: #1C2B3E; /* Texto principal (P) */
+  --color-primario: #2181BD;
+  /*Para encabezados principales (Nav, header o h1 y h2) */
+  --color-secundario: #6DADD8;
+  /* Para cosas secundarias (aside, footer) */
+  --color-acento: #80CBF3;
+  /* Para botones que hagan algo, iconos si hay o cosas que necesiten llamar la atencion */
+  --color-fondo: #F4F7F9;
+  /* Para el cuerpo principal (Body, main) */
+  --color-texto: #1C2B3E;
+  /* Texto principal (P) */
 }
 
 /* Font para títulos */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Bebas Neue", sans-serif;
 }
 
 /* Font para el texto principal, tamaño base y line-height */
 body {
-    font-size: 1rem; /* Equivalente a 16px */
-    line-height: 1.6; /* Mejora la legibilidad (entre 1.5 y 1.8) */
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    font-family: "Roboto Mono", monospace;
+  font-size: 1rem;
+  /* Equivalente a 16px */
+  line-height: 1.6;
+  /* Mejora la legibilidad (entre 1.5 y 1.8) */
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: "Roboto Mono", monospace;
 }
 
 /* Estilos diferenciados para los headings (tamaño y color) */
 h1 {
   font-size: 2.5rem;
-  color: #1C2B3E; /* Color de texto */
+  color: #1C2B3E;
+  /* Color de texto */
 }
 
 h2 {
   font-size: 2rem;
-  color: #2181BD; /* Color primario */
+  color: #2181BD;
+  /* Color primario */
 }
 
 h3 {
   font-size: 1.5rem;
-  color: #3C678E; /* Color secundario */
+  color: #3C678E;
+  /* Color secundario */
+}
+
+/* Header */
+
+header {
+  background-color: var(--color-primario);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem 0;
+  border-bottom: 5px solid var(--color-acento);
+}
+
+header h1 {
+  margin-bottom: 0.2rem;
+  color: white;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+header p {
+  margin-bottom: 1.5rem;
+  color: white;
+  font-size: 1rem;
+}
+
+/*Navbar*/
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px 6px 0 0;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--color-acento);
+    color: var(--color-texto);
+}
+
+/* Main */
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  min-height: 500px;
+}
+
+main>h2 {
+  margin-bottom: 1rem;
+}
+
+main>p {
+  margin-bottom: 2rem;
+}
+
+/*Footer */
+
+footer {
+  background-color: var(--color-secundario);
+  color: var(--color-texto);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  border-top: 4px solid var(--color-acento);
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
 }
