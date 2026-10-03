@@ -1,23 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
-  --color-primario: #0d1117; 
+  --color-primario: #0d1117;
   /* Para el fondo principal (Body, main). */
 
-  --color-secundario: #1a1f2c; 
+  --color-secundario: #1a1f2c;
   /* Para contenedores secundarios (Nav, header, tarjetas o bloques de texto). */
 
-  --color-acento: #e5a93b; 
+  --color-acento: #e5a93b;
   /* Para botones, iconos, enlaces o elementos clave. */
 
-  --color-fondo: #252c3a; 
+  --color-fondo: #252c3a;
   /* Para asides o el footer, creando una separación clara de las secciones */
 
-  --color-texto: #f0f3f6; 
+  --color-texto: #f0f3f6;
   /* Texto principal (P). Un blanco roto/gris muy claro para que no canse la vista y resalte perfecto sobre la oscuridad */
 
   --color-titulos: #94a3b8;
   /* (Opcional) Para encabezados (h1, h2, h3). */
 }
-
 
 /* Font para títulos */
 h1,
@@ -83,7 +86,7 @@ a:hover {
 
 /* Evita que los links cambien a violeta cuando ya se visitaron */
 a:visited {
-  color: #4facfe; 
+  color: #4facfe;
 }
 
 
@@ -92,6 +95,7 @@ header {
   color: white;
   text-align: center;
   padding: 2rem 1rem 0;
+  margin-bottom: 2rem;
   border-bottom: 5px solid var(--color-acento);
 }
 
@@ -111,26 +115,26 @@ header p {
 /*Navbar*/
 
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1rem;
 }
 
 nav a {
-    font-family: "Roboto Mono", monospace;
-    color: white;
-    text-decoration: none;
-    padding: 0.8rem 1.2rem;
-    border-radius: 6px 6px 0 0;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
+  font-family: "Roboto Mono", monospace;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px 6px 0 0;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
-    background-color: var(--color-acento);
-    color: var(--color-texto);
+  background-color: var(--color-acento);
+  color: var(--color-texto);
 }
 
 /* Main */
@@ -143,8 +147,10 @@ nav a:hover {
 
 .lista-gotham li {
   color: var(--color-texto);
-  margin-bottom: 12px; /* Separa los elementos para que no queden amontonados */
-  line-height: 1.5; /* Espaciado de lectura cómodo */
+  margin-bottom: 12px;
+  /* Separa los elementos para que no queden amontonados */
+  line-height: 1.5;
+  /* Espaciado de lectura cómodo */
 }
 
 /* Le da el color de acento dorado a los números de la lista */
@@ -169,6 +175,13 @@ main>p {
   margin-bottom: 2rem;
 }
 
+/*Secciones*/
+
+section {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
 /*Footer */
 
 footer {
@@ -183,4 +196,81 @@ footer {
 footer p {
   margin: 0;
   font-size: 0.9rem;
+}
+
+/* FORMULARIO */
+
+form {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+
+  background-color: var(--color-secundario);
+  border: 2px solid var(--color-acento);
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+/* Etiquetas */
+form label {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: var(--color-texto);
+}
+
+/* Campos de texto */
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.8rem;
+
+  background-color: var(--color-primario);
+  color: var(--color-texto);
+
+  border: 1px solid var(--color-titulos);
+  border-radius: 6px;
+
+  font-family: "Roboto Mono", monospace;
+  font-size: 1rem;
+}
+
+/* Cuando seleccionamos un campo */
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--color-acento);
+}
+
+/* Área del mensaje */
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Botón */
+form button {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+
+  background-color: var(--color-acento);
+  color: var(--color-primario);
+
+  border: none;
+  border-radius: 6px;
+
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+  font-size: 1rem;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+form button:hover {
+  background-color: #f5c45f;
+  transform: translateY(-2px);
 }
