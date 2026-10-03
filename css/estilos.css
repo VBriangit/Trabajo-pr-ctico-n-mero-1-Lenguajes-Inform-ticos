@@ -1,15 +1,23 @@
 :root {
-  --color-primario: #2181BD;
-  /*Para encabezados principales (Nav, header o h1 y h2) */
-  --color-secundario: #6DADD8;
-  /* Para cosas secundarias (aside, footer) */
-  --color-acento: #80CBF3;
-  /* Para botones que hagan algo, iconos si hay o cosas que necesiten llamar la atencion */
-  --color-fondo: #F4F7F9;
-  /* Para el cuerpo principal (Body, main) */
-  --color-texto: #1C2B3E;
-  /* Texto principal (P) */
+  --color-primario: #0d1117; 
+  /* Para el fondo principal (Body, main). */
+
+  --color-secundario: #1a1f2c; 
+  /* Para contenedores secundarios (Nav, header, tarjetas o bloques de texto). */
+
+  --color-acento: #e5a93b; 
+  /* Para botones, iconos, enlaces o elementos clave. */
+
+  --color-fondo: #252c3a; 
+  /* Para asides o el footer, creando una separación clara de las secciones */
+
+  --color-texto: #f0f3f6; 
+  /* Texto principal (P). Un blanco roto/gris muy claro para que no canse la vista y resalte perfecto sobre la oscuridad */
+
+  --color-titulos: #94a3b8;
+  /* (Opcional) Para encabezados (h1, h2, h3). */
 }
+
 
 /* Font para títulos */
 h1,
@@ -27,6 +35,16 @@ body {
   background-color: var(--color-fondo);
   color: var(--color-texto);
   font-family: "Roboto Mono", monospace;
+  position: relative;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-texto);
+  font-family: "Roboto Mono", monospace;
+  margin: 0;
+  min-height: 100vh;
 }
 
 /* Estilos diferenciados para los headings (tamaño y color) */
@@ -49,6 +67,25 @@ h3 {
 }
 
 /* Header */
+
+/* Estilos específicos para los links de la página */
+a {
+  color: #4facfe;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #e5a93b;
+  text-decoration: underline;
+}
+
+/* Evita que los links cambien a violeta cuando ya se visitaron */
+a:visited {
+  color: #4facfe; 
+}
+
 
 header {
   background-color: var(--color-primario);
@@ -97,6 +134,25 @@ nav a:hover {
 }
 
 /* Main */
+
+/* Estilos para la lista */
+.lista-gotham {
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+.lista-gotham li {
+  color: var(--color-texto);
+  margin-bottom: 12px; /* Separa los elementos para que no queden amontonados */
+  line-height: 1.5; /* Espaciado de lectura cómodo */
+}
+
+/* Le da el color de acento dorado a los números de la lista */
+.lista-gotham li::marker {
+  color: #e5a93b;
+  font-weight: bold;
+}
+
 
 main {
   max-width: 1000px;
