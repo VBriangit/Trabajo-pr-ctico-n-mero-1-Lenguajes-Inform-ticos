@@ -18,7 +18,7 @@
   --color-texto: #f0f3f6;
   /* Texto principal (P). Un blanco roto/gris muy claro para que no canse la vista y resalte perfecto sobre la oscuridad */
 
-  --color-titulos: #94a3b8;
+  --color-titulos: #cbcedf;
   /* (Opcional) Para encabezados (h1, h2, h3). */
 }
 
@@ -273,4 +273,69 @@ form button {
 form button:hover {
   background-color: #f5c45f;
   transform: translateY(-2px);
+}
+
+/* Flexbox */
+
+/* Mantiene el encabezado visible y permite que el contenido continúe debajo. */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* La navegación se adapta cuando el ancho disponible es reducido. */
+nav {
+  flex-wrap: wrap;
+}
+
+nav a {
+  flex: 1 1 120px;
+}
+
+/* Los artículos funcionan como cards responsivas dentro de cada sección. */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+section article {
+  flex: 1 1 280px;
+  min-width: 0;
+  padding: 1.5rem;
+  background-color: var(--color-secundario);
+  border: 1px solid var(--color-titulos);
+  border-radius: 10px;
+}
+
+/* Bootstrap - personalizaciones */
+
+/* Las imágenes respetan el ancho de sus cards y del contenedor principal. */
+main img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Posicionamiento */
+
+/* Permite agregar etiquetas o íconos superpuestos dentro de las cards. */
+section article {
+  position: relative;
+}
+
+/* Ajuste responsive para pantallas chiquitas. */
+@media (max-width: 600px) {
+  header {
+    position: relative;
+  }
+
+  main {
+    padding: 2rem 1rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
 }
