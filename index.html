@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <link rel="icon" type="image/png" href="imagenes/batman icono.png">
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS — antes del CSS propio -->
@@ -19,11 +22,32 @@
         <h1>Gotham City</h1>
         <p>Descubrí la ciudad ficticia ubicada en el estado de Nueva Jersey, Estados Unidos.</p>
 
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="ciudad.html">La ciudad</a>
-            <a href="lugares.html">Lugares</a>
-            <a href="contacto.html">Contacto</a>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-gotham">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Gotham City</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuGotham"
+                    aria-controls="menuGotham" aria-expanded="false" aria-label="Abrir o cerrar el menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuGotham">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ciudad.html">La ciudad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="lugares.html">Lugares</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -33,13 +57,14 @@
             <h2>Bienvenidos a Gotham City</h2>
 
             <p>
-                Gotham City es una ciudad notoriamente corrupta y plagada por índices de criminalidad excesivamente altos,
+                Gotham City es una ciudad notoriamente corrupta y plagada por índices de criminalidad excesivamente
+                altos,
                 Gotham ha sido dominado por una serie de señores del crimen a lo largo de su historia moderna.
             </p>
 
             <!-- ENLACE INTERNO AÑADIDO -->
             <p>
-                ⚠️ Antes de recorrer las calles, te recomendamos leer nuestra 
+                ⚠️ Antes de recorrer las calles, te recomendamos leer nuestra
                 <a href="#supervivencia">Guía de Supervivencia Ciudadana</a>.
             </p>
 
@@ -69,23 +94,24 @@
             <h2>Guía de supervivencia para el ciudadano común</h2>
             <ol class="lista-gotham">
                 <li>
-                    <strong>Asegurá tu hogar antes de las 18:00:</strong> 
+                    <strong>Asegurá tu hogar antes de las 18:00:</strong>
                     Los distritos de Bowery y Crime Alley duplican su peligrosidad al caer el sol.
                 </li>
                 <li>
-                    <strong>Identificá los refugios de emergencia:</strong> 
+                    <strong>Identificá los refugios de emergencia:</strong>
                     Ubicá la comisaría de la GCPD más cercana y los búnkeres públicos de la Fundación Wayne.
                 </li>
                 <li>
-                    <strong>Evitá las zonas industriales clausuradas:</strong> 
+                    <strong>Evitá las zonas industriales clausuradas:</strong>
                     Las plantas químicas abandonadas suelen ser el centro de operaciones de facciones criminales.
                 </li>
                 <li>
-                    <strong>Reconocé las señales en el cielo:</strong> 
-                    Si ves la silueta de un murciélago proyectada en las nubes, resguardate de inmediato; un enfrentamiento es inminente.
+                    <strong>Reconocé las señales en el cielo:</strong>
+                    Si ves la silueta de un murciélago proyectada en las nubes, resguardate de inmediato; un
+                    enfrentamiento es inminente.
                 </li>
                 <li>
-                    <strong>Contratá un seguro contra daños colaterales:</strong> 
+                    <strong>Contratá un seguro contra daños colaterales:</strong>
                     Asegurá tus bienes contra persecuciones a alta velocidad, gases de la risa o toxinas botánicas.
                 </li>
             </ol>
@@ -94,9 +120,10 @@
         <aside>
             <h2>¿Sabías que...?</h2>
             <p>
-                La arquitectura caótica de la ciudad no es un fallo de planificación. 
-                Los fundadores diseñaron el mapa de Gotham con callejones sin salida y giros laberínticos intencionales 
-                con el objetivo místico de "confundir y atrapar" a los malos espíritus derivados de la maldición de su suelo.
+                La arquitectura caótica de la ciudad no es un fallo de planificación.
+                Los fundadores diseñaron el mapa de Gotham con callejones sin salida y giros laberínticos intencionales
+                con el objetivo místico de "confundir y atrapar" a los malos espíritus derivados de la maldición de su
+                suelo.
             </p>
         </aside>
 
@@ -104,11 +131,13 @@
 
     <footer>
         <address>
-            &copy; 2026 Alcaldía de Gotham City. Todos los derechos reservados. 'Una ciudad con historia, un futuro por proteger'
+            &copy; 2026 Alcaldía de Gotham City. Todos los derechos reservados. 'Una ciudad con historia, un futuro por
+            proteger'
         </address>
     </footer>
-<!-- Bootstrap JS — antes del </body> -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
+    <!-- Bootstrap JS — antes del </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
 </body>
+
 </html>

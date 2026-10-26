@@ -22,11 +22,32 @@
         <h1>Gotham City</h1>
         <p>No te olvides de contactarnos ante cualquier emergencia.</p>
 
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="ciudad.html">La ciudad</a>
-            <a href="lugares.html">Lugares</a>
-            <a href="contacto.html">Contacto</a>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-gotham">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Gotham City</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuGotham"
+                    aria-controls="menuGotham" aria-expanded="false" aria-label="Abrir o cerrar el menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuGotham">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ciudad.html">La ciudad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="lugares.html">Lugares</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -44,18 +65,18 @@
             <ul>
                 <!-- Link de teléfono -->
                 <li>
-                    <strong>Central de la GCPD:</strong> 
+                    <strong>Central de la GCPD:</strong>
                     <a href="tel:+1125412333">Llamar a la Policía</a>
                 </li>
                 <!-- Link de correo electrónico -->
                 <li>
-                    <strong>Denuncias Anónimas:</strong> 
-                    <a href="mailto: denunciasgotham@gmail.com">Enviar Correo Electrónico</a>
+                    <strong>Denuncias Anónimas:</strong>
+                    <a href="mailto:denunciasgotham@gmail.com">Enviar Correo Electrónico</a>
                 </li>
                 <!-- Link externo requerido con target y rel -->
                 <li>
-                    <strong>Asistencia Social:</strong> 
-                    Para solicitar subsidios por daños colaterales, visitá la 
+                    <strong>Asistencia Social:</strong>
+                    Para solicitar subsidios por daños colaterales, visitá la
                     <a href="https://dc.com" target="_blank" rel="noopener noreferrer">Fundación Wayne Oficial</a>.
                 </li>
             </ul>
@@ -86,11 +107,12 @@
     </main>
 
     <footer>
-        <p>En caso de ver un murciélago gigante en el cielo, por favor no intente contactarlo directamente; espere a que la policía encienda la señal.</p>
+        <p>En caso de ver un murciélago gigante en el cielo, por favor no intente contactarlo directamente; espere a que
+            la policía encienda la señal.</p>
     </footer>
-<!-- Bootstrap JS — antes del </body> -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
+    <!-- Bootstrap JS — antes del </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
 </body>
 
 </html>
