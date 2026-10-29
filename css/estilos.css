@@ -340,3 +340,36 @@ section article {
   }
 }
 
+
+/* Tarjetas de la grilla */
+.tarjeta-gotham {
+    background-color: var(--color-secundario);
+    border: 2px solid var(--color-acento);
+    border-radius: 10px;
+    padding: 1.5rem;
+    color: var(--color-texto);
+}
+
+/* Títulos amarillos */
+.tarjeta-gotham h3 {
+    color: var(--color-acento);
+}
+
+/* Texto de las tarjetas */
+.tarjeta-gotham p {
+    color: var(--color-texto);
+}
+
+/* Enlaces amarillos en todos sus estados */
+.tarjeta-gotham a,
+.tarjeta-gotham a:visited,
+.tarjeta-gotham a:hover,
+.tarjeta-gotham a:focus {
+    color: var(--color-acento);
+}
+
+.tarjeta-gotham a:hover {
+    text-decoration: underline;
+}
+
+
