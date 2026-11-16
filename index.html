@@ -46,6 +46,9 @@
                             <a class="nav-link" href="contacto.html">Contacto</a>
                         </li>
                     </ul>
+                    <button type="button" id="botonTema" class="boton-tema">
+                        ☀ Modo claro
+                    </button>
                 </div>
             </div>
         </nav>
@@ -83,7 +86,7 @@
                     </article>
                 </div>
 
-                 <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4">
                     <article class="tarjeta-gotham h-100">
                         <h3>Lugares para visitar</h3>
                         <p>
@@ -137,14 +140,33 @@
     </main>
 
     <footer>
+
+        <section class="newsletter">
+            <h3>Unite al boletín de Gotham</h3>
+            <p>Recibí novedades, alertas e información de la ciudad.</p>
+
+            <form id="formNewsletter">
+                <label for="emailNewsletter">Correo electrónico:</label>
+
+                <div class="newsletter-campos">
+                    <input type="email" id="emailNewsletter" name="emailNewsletter" placeholder="nombre@ejemplo.com"
+                        required>
+
+                    <button type="submit">Suscribirme</button>
+                </div>
+
+                <p id="mensajeNewsletter" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
         <address>
             &copy; 2026 Alcaldía de Gotham City. Todos los derechos reservados. 'Una ciudad con historia, un futuro por
             proteger'
         </address>
     </footer>
     <!-- Bootstrap JS — antes del </body> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
