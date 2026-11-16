@@ -31,6 +31,8 @@ h3 {
 
 /* Font para el texto principal, tamaño base y line-height */
 body {
+  margin: 0;
+  min-height: 100vh;
   font-size: 1rem;
   /* Equivalente a 16px */
   line-height: 1.6;
@@ -39,15 +41,6 @@ body {
   color: var(--color-texto);
   font-family: "Roboto Mono", monospace;
   position: relative;
-}
-
-body {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--color-texto);
-  font-family: "Roboto Mono", monospace;
-  margin: 0;
-  min-height: 100vh;
 }
 
 /* Estilos diferenciados para los headings (tamaño y color) */
@@ -91,6 +84,9 @@ a:visited {
 
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   background-color: var(--color-primario);
   color: white;
   text-align: center;
@@ -114,23 +110,6 @@ header p {
 
 /*Navbar*/
 
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  padding-top: 1rem;
-}
-
-nav a {
-  font-family: "Roboto Mono", monospace;
-  color: white;
-  text-decoration: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 6px 6px 0 0;
-  font-weight: bold;
-  transition: background-color 0.3s, color 0.3s;
-}
 
 nav a:hover {
   background-color: var(--color-acento);
@@ -172,13 +151,6 @@ main>h2 {
 }
 
 main>p {
-  margin-bottom: 2rem;
-}
-
-/*Secciones*/
-
-section {
-  padding: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -277,36 +249,17 @@ form button:hover {
 
 /* Flexbox */
 
-/* Mantiene el encabezado visible y permite que el contenido continúe debajo. */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-/* La navegación se adapta cuando el ancho disponible es reducido. */
-nav {
-  flex-wrap: wrap;
-}
-
-nav a {
-  flex: 1 1 120px;
-}
-
 /* Los artículos funcionan como cards responsivas dentro de cada sección. */
 section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
 section article {
-  flex: 1 1 280px;
-  min-width: 0;
-  padding: 1.5rem;
-  background-color: var(--color-secundario);
-  border: 1px solid var(--color-titulos);
-  border-radius: 10px;
+    padding: 1.5rem;
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-titulos);
+    border-radius: 10px;
 }
 
 /* Bootstrap - personalizaciones */
@@ -319,11 +272,6 @@ main img {
 }
 
 /* Posicionamiento */
-
-/* Permite agregar etiquetas o íconos superpuestos dentro de las cards. */
-section article {
-  position: relative;
-}
 
 /* Ajuste responsive para pantallas chiquitas. */
 @media (max-width: 600px) {
@@ -343,21 +291,21 @@ section article {
 
 /* Tarjetas de la grilla */
 .tarjeta-gotham {
-    background-color: var(--color-secundario);
-    border: 2px solid var(--color-acento);
-    border-radius: 10px;
-    padding: 1.5rem;
-    color: var(--color-texto);
+  background-color: var(--color-secundario);
+  border: 2px solid var(--color-acento);
+  border-radius: 10px;
+  padding: 1.5rem;
+  color: var(--color-texto);
 }
 
 /* Títulos amarillos */
 .tarjeta-gotham h3 {
-    color: var(--color-acento);
+  color: var(--color-acento);
 }
 
 /* Texto de las tarjetas */
 .tarjeta-gotham p {
-    color: var(--color-texto);
+  color: var(--color-texto);
 }
 
 /* Enlaces amarillos en todos sus estados */
@@ -365,45 +313,45 @@ section article {
 .tarjeta-gotham a:visited,
 .tarjeta-gotham a:hover,
 .tarjeta-gotham a:focus {
-    color: var(--color-acento);
+  color: var(--color-acento);
 }
 
 .tarjeta-gotham a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 
 /* Boton de cambio de tema*/
 
 .boton-tema {
-    padding: 0.5rem 0.8rem;
-    margin-left: 1rem;
-    color: var(--color-acento);
-    background: transparent;
-    border: 1px solid var(--color-acento);
-    border-radius: 6px;
-    cursor: pointer;
-    font-family: "Roboto Mono", monospace;
+  padding: 0.5rem 0.8rem;
+  margin-left: 1rem;
+  color: var(--color-acento);
+  background: transparent;
+  border: 1px solid var(--color-acento);
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Roboto Mono", monospace;
 }
 
 .boton-tema:hover {
-    color: var(--color-primario);
-    background-color: var(--color-acento);
+  color: var(--color-primario);
+  background-color: var(--color-acento);
 }
 
 
 /* ===== MODO CLARO ===== */
 
 body.modo-claro {
-    --color-primario: #f4f4f4;
-    --color-secundario: #ffffff;
-    --color-acento: #9a6500;
-    --color-fondo: #e9e9e9;
-    --color-texto: #252525;
-    --color-titulos: #333333;
+  --color-primario: #f4f4f4;
+  --color-secundario: #ffffff;
+  --color-acento: #9a6500;
+  --color-fondo: #e9e9e9;
+  --color-texto: #252525;
+  --color-titulos: #333333;
 
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
 }
 
 /* Textos generales */
@@ -414,29 +362,29 @@ body.modo-claro h4,
 body.modo-claro p,
 body.modo-claro li,
 body.modo-claro label {
-    color: var(--color-texto);
+  color: var(--color-texto);
 }
 
 /* Encabezado y pie */
 body.modo-claro header,
 body.modo-claro footer {
-    background-color: var(--color-primario);
-    color: var(--color-texto);
+  background-color: var(--color-primario);
+  color: var(--color-texto);
 }
 
 /* Navegación */
 body.modo-claro .navbar-gotham {
-    background-color: var(--color-primario);
+  background-color: var(--color-primario);
 }
 
 body.modo-claro .navbar-gotham .navbar-brand,
 body.modo-claro .navbar-gotham .nav-link {
-    color: var(--color-texto);
+  color: var(--color-texto);
 }
 
 body.modo-claro .navbar-gotham .nav-link:hover {
-    color: var(--color-primario);
-    background-color: var(--color-acento);
+  color: var(--color-primario);
+  background-color: var(--color-acento);
 }
 
 /* Tarjetas */
@@ -444,118 +392,116 @@ body.modo-claro .tarjeta-gotham,
 body.modo-claro .tarjeta-contacto,
 body.modo-claro .formulario-contacto,
 body.modo-claro .newsletter {
-    background-color: var(--color-secundario);
-    color: var(--color-texto);
+  background-color: var(--color-secundario);
+  color: var(--color-texto);
 }
 
 body.modo-claro .tarjeta-gotham h3,
 body.modo-claro .tarjeta-contacto h4,
-body.modo-claro .canales-ayuda > h3,
+body.modo-claro .canales-ayuda>h3,
 body.modo-claro .formulario-encabezado h3,
 body.modo-claro .newsletter h3 {
-    color: var(--color-acento);
+  color: var(--color-acento);
 }
 
 /* Enlaces */
 body.modo-claro a {
-    color: #795000;
+  color: #795000;
 }
 
 /* Campos del formulario */
 body.modo-claro .formulario-gotham .form-control,
 body.modo-claro .formulario-gotham .form-select,
 body.modo-claro .newsletter-campos input {
-    color: #252525;
-    background-color: #ffffff;
-    border-color: #9a6500;
+  color: #252525;
+  background-color: #ffffff;
+  border-color: #9a6500;
 }
 
 body.modo-claro .formulario-gotham .form-control::placeholder,
 body.modo-claro .newsletter-campos input::placeholder {
-    color: #666666;
+  color: #666666;
 }
 
 /* Botones */
 body.modo-claro .boton-gotham,
 body.modo-claro .newsletter-campos button {
-    color: #ffffff;
-    background-color: #795000;
-    border-color: #795000;
+  color: #ffffff;
+  background-color: #795000;
+  border-color: #795000;
 }
 
 body.modo-claro .boton-gotham:hover {
-    color: #795000;
-    background-color: #ffffff;
+  color: #795000;
+  background-color: #ffffff;
 }
 
 /* Newsletter*/
 
 .newsletter {
-    display: block;
-    width: 100%;
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: var(--color-secundario);
-    border: 1px solid var(--color-acento);
-    border-radius: 10px;
-    box-sizing: border-box;
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--color-secundario);
+  border: 1px solid var(--color-acento);
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .newsletter h3 {
-    color: var(--color-acento);
-    margin-bottom: 0.8rem;
+  color: var(--color-acento);
+  margin-bottom: 0.8rem;
 }
 
 .newsletter p,
 .newsletter label {
-    color: var(--color-texto);
+  color: var(--color-texto);
 }
 
 .newsletter-campos {
-    display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    width: 100%;
-    margin-top: 0.8rem;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  width: 100%;
+  margin-top: 0.8rem;
 }
 
 .newsletter-campos input {
-    flex: 1 1 250px;
-    width: 100%;
-    min-width: 0;
-    padding: 0.8rem;
-    color: var(--color-texto);
-    background-color: var(--color-primario);
-    border: 1px solid var(--color-acento);
-    border-radius: 6px;
+  flex: 1 1 250px;
+  width: 100%;
+  min-width: 0;
+  padding: 0.8rem;
+  color: var(--color-texto);
+  background-color: var(--color-primario);
+  border: 1px solid var(--color-acento);
+  border-radius: 6px;
 }
 
 .newsletter-campos button {
-    padding: 0.8rem 1.3rem;
-    color: var(--color-primario);
-    background-color: var(--color-acento);
-    border: 1px solid var(--color-acento);
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
+  padding: 0.8rem 1.3rem;
+  color: var(--color-primario);
+  background-color: var(--color-acento);
+  border: 1px solid var(--color-acento);
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 #mensajeNewsletter {
-    margin-top: 1rem;
-    color: var(--color-acento);
-    font-weight: bold;
+  margin-top: 1rem;
+  color: var(--color-acento);
+  font-weight: bold;
 }
 
 @media (max-width: 576px) {
-    .newsletter {
-        padding: 1.3rem;
-    }
+  .newsletter {
+    padding: 1.3rem;
+  }
 
-    .newsletter-campos button {
-        width: 100%;
-    }
+  .newsletter-campos button {
+    width: 100%;
+  }
 }
-
-
