@@ -505,3 +505,17 @@ body.modo-claro .boton-gotham:hover {
     width: 100%;
   }
 }
+
+/*Mensaje de confirmacion de formulario*/
+
+#mensajeContacto {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #1b4332;
+    color: #d8f3dc;
+    border: 2px solid #52b788;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1rem;
+}

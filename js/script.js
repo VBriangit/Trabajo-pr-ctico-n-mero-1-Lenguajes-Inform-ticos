@@ -63,13 +63,11 @@ if (formNewsletter) {
 
 
 // Confirmacion de formulario
-
-const formContacto = document.querySelector(".formulario-gotham");
+const formContacto = document.getElementById("formulario-gotham");
 
 if (formContacto) {
     formContacto.addEventListener("submit", function (event) {
         event.preventDefault();
-
         const mensaje = document.getElementById("mensajeContacto");
 
         if (!formContacto.checkValidity()) {
@@ -77,8 +75,7 @@ if (formContacto) {
             return;
         }
 
-        mensaje.textContent =
-            "¡Gracias! Tu mensaje fue validado correctamente.";
+        mensaje.textContent = "¡Gracias! Tu mensaje fue validado correctamente.";
 
         formContacto.reset();
     });
