@@ -55,7 +55,7 @@ if (formNewsletter) {
         }
 
         mensaje.textContent =
-            "¡Gracias! Tu dirección de correo tiene un formato válido.";
+            "¡Gracias por formar parte del boletin de Gotham City!";
 
         formNewsletter.reset();
     });
